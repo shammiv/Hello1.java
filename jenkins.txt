@@ -1,0 +1,17 @@
+// start the pipeline
+pipeline {
+  // where the pipeline job will run
+   agent any
+  // start of stages : build, test, deploy..
+  stages {
+    // start of stage : build
+	stage ('build') {
+	steps {
+	  // invoke command to build with maven
+	   #!/bin/bash
+	  'mvn clean install'
+	  }
+	}
+  }
+  // end the pipeline
+}
